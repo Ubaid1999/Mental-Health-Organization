@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title> Mental Heath Managment System</title>
+
+    <!-- bootstrap css + DataTable css + Fontvector css  !-->
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <link href="fontVectorLib/css/all.css" rel="stylesheet" />
+
+    <!-- Stylesheet for css  !-->
+    <link href="CSS/StyleSheet1.css" rel="stylesheet" />
+
+     <!-- bootstrap js + DataTable js + Fontvector js  !-->
+
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+   
+
+         <!-- Header!-->
+        <header>
+
+        <div id="header1" class="container-fluid">
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <a class="navbar-brand" href="#">
+                    <asp:Image ID="main" src="Images/3306335-200.png" runat="server" width="42px" height="41px" />
+                   
+                   Mind Matters Mental Health Organization  
+                </a>
+                
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" ">
+                    <ul class="navbar-nav mr-auto">
+                       
+                    </ul>
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" ForeColor="Black" BackColor="LightCyan" PostBackUrl="~/UserLogin.aspx" OnClick="Page_Load" CausesValidation="False"  >Login </asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" ForeColor="Black" BackColor="LightCyan" PostBackUrl="~/Admin.aspx" CausesValidation="False" >🌟Doctor Signup </asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" ForeColor="Black" BackColor="LightCyan" PostBackUrl="~/UserSignUp.aspx" CausesValidation="False"  >Patient SignUp</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" ForeColor="Black" BackColor="LightCyan" PostBackUrl="~/HomePage.aspx" CausesValidation="False" OnClick="LinkButton3_Click" >Logout</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton6" runat="server" ForeColor="Black" BackColor="LightCyan" PostBackUrl="~/Catalogue.aspx" CausesValidation="False" OnClick="LinkButton6_Click" >Catalogue</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" ForeColor="Black" BackColor="LightCyan" PostBackUrl="~/HomePage.aspx" CausesValidation="False" >Home</asp:LinkButton>
+
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+        </div>
+
+       </header>
+
+
+         <!-- Content Placeholder (MAIN)  !-->
+        <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 </asp:ContentPlaceHolder>
+        </div>
+        
+         <!-- Footer  !-->
+
+      <!-- Footer -->
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" CausesValidation="False" OnClick="LinkButton11_Click">Home</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" CausesValidation="False" OnClick="LinkButton12_Click">Catalogue</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" CausesValidation="False">Privacy policy</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server" CausesValidation="False">Contact us</asp:LinkButton>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+
+                   <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color: white">&copy All right Reversed. </p>
+                       
+                        <p style="color: white">Website Designed and Coded by DDC (Ubaid, Roha , Sajdah) </p>
+                    </div>
+
+                </div>
+
+            </div>
+           
+
+        </footer>
+        <!-- ./Footer -->
+
+    </form>
+</body>
+</html>
